@@ -4,9 +4,15 @@ small tic-tac-toe console/service game in Clojure
 
 ## Usage
 
-```lein run console``` - to get a console game
+first clone this repo
 
-```lein run service``` - to use this as a backend api service
+```git clone https://github.com/adrian-marina/tictactoe.git```
+
+then depending on what mode you want to play, run
+
+```lein run console``` - to get a console text based game
+
+```lein run service``` - to use this as a service for https://github.com/adrian-marina/tictactoe-ui
 
 ### Testing
 

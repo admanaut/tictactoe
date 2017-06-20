@@ -82,7 +82,6 @@
   [board :- Board
    coord :- Coord
    v :- BoardValue]
-  (println v)
   (if (valid-move? board coord)
     (assoc-in board coord v)
     board))
