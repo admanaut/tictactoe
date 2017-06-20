@@ -7,6 +7,7 @@
                  [prismatic/schema "1.1.6"]
                  [org.clojure/test.check "0.9.0"]
                  [http-kit "2.2.0"]
+                 [ring-cors "0.1.10"]
                  [metosin/compojure-api "1.1.10"]]
   :main ^:skip-aot tictactoe.core
   :target-path "target/%s"
