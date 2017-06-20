@@ -3,7 +3,7 @@
 
 (s/defschema BoardValue (s/enum nil :x :0))
 (s/defschema Board [[BoardValue]])
-(s/defschema Coord [[(s/one s/Int :x) (s/one s/Int :y)]])
+(s/defschema Coord [(s/one s/Int :x) (s/one s/Int :y)])
 (s/defschema Winner (s/maybe [(s/one (s/enum :x :y :draw) :p) (s/optional [Coord] :c)]))
 
 (defn board-col
@@ -82,6 +82,7 @@
   [board :- Board
    coord :- Coord
    v :- BoardValue]
+  (println v)
   (if (valid-move? board coord)
     (assoc-in board coord v)
     board))

@@ -40,15 +40,15 @@
 
 (defn display-result
   [w board]
-  (when-let [[r _win-seq] w]
+  (when-let [[r win-seq] w]
     (case r
       :draw (do
-              (println "It's a draw ! Congratulations you're equly smart ;-|")
+              (println "It's a draw ! Congratulations you're equally smart ;-|")
               (print-board board))
       (do
         (println "~~~~~~~~~~ We have a winner ~~~~~~~~~~")
-        (println "Congratulations " (first w) " you're awesome !")
-        (print-board (decorate-win-moves board (second w)))))))
+        (println "Congratulations " r " you're awesome !")
+        (print-board (decorate-win-moves board win-seq))))))
 
 (defn main
   []
